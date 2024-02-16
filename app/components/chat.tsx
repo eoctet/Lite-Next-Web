@@ -744,9 +744,14 @@ function _Chat() {
                         <Avatar avatar={session.bot.avatar} character={config.characterConfig} />
                       )}
                     </div>
-
+                    {showTyping && (
+                      <div className={styles["chat-message-status"]}>
+                        {Locale.Chat.Typing}
+                      </div>
+                    )}
                     {showActions && (
                       <div className={styles["chat-message-actions"]}>
+
                         <div className={styles["chat-input-actions"]}>
                           {message.streaming ? (
                             <ChatAction
@@ -779,11 +784,6 @@ function _Chat() {
                       </div>
                     )}
                   </div>
-                  {showTyping && (
-                    <div className={styles["chat-message-status"]}>
-                      {Locale.Chat.Typing}
-                    </div>
-                  )}
                   <div className={styles["chat-message-item"]}>
                     <Markdown
                       content={message.content}

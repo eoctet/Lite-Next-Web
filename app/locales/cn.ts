@@ -126,7 +126,7 @@ const cn = {
       SubTitle: "在预览气泡中预览 Markdown 内容",
     },
     Model: {
-      Title: "AI 角色",
+      Title: "🤖 AI 角色",
       SubTitle: "选择切换不同的AI角色",
 
       Reload: {

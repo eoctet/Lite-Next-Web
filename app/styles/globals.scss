@@ -4,42 +4,64 @@
 @mixin light {
   --theme: light;
 
-  /* color */
   --white: white;
-  --black: rgb(48, 48, 48);
-  --gray: rgb(250, 250, 250);
-  --primary: rgb(76, 175, 80);
-  --second: rgb(228, 250, 229);
-  --hover-color: #f3f3f3;
+  --black: rgb(31, 35, 41);
+  --gray: rgb(220, 232, 255);
+  --primary: rgb(92, 149, 255);
+
+  --modal: var(--white);
+
+  --sidebar: var(--primary);
+  --sidebar-menu: var(--white);
+  --selected: var(--gray);
+
+  --card-block: var(--white);
+  --card-block-second: var(--white);
+
+  --chat-container: var(--white);
+  --chat-message: var(--gray);
+  --user-chat-message: #4CAF50;
+  --chat-info: var(--primary);
+
+  --hover-color: rgba(220, 232, 255, 0.8);
   --bar-color: rgba(0, 0, 0, 0.1);
+  --border-in-light: 1px solid rgba(0, 0, 0, 0.18);
   --theme-color: var(--gray);
 
   /* shadow */
-  --shadow: 50px 50px 100px 10px rgb(0, 0, 0, 0.1);
-  --card-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.05);
-
-  /* stroke */
-  --border-in-light: 1px solid rgb(222, 222, 222);
+  //   --shadow: 50px 50px 100px 10px rgb(0, 0, 0, 0.1);
+  //   --card-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.05);
 }
 
 @mixin dark {
   --theme: dark;
 
   /* color */
-  --white: rgb(30, 30, 30);
-  --black: rgb(187, 187, 187);
-  --gray: rgb(21, 21, 21);
-  --primary: rgb(76, 175, 80);
-  --second: rgb(19, 19, 19);
-  --hover-color: #323232;
+  --white: rgb(6, 11, 22);
+  --black: rgb(230, 237, 243);
+  --gray: rgb(1, 1, 3);
+  --primary: rgb(63, 81, 181);
 
+  --modal: rgb(39, 43, 61);
+
+  --sidebar: linear-gradient(0deg, var(--white), rgb(16, 35, 67), var(--white));
+  --sidebar-menu: rgba(1, 1, 3, 0.5);
+  --selected: var(--primary);
+
+  --card-block: var(--sidebar-menu);
+  --card-block-second: rgba(6, 11, 22, 0.5);
+
+  --chat-container: var(--sidebar);
+  --chat-message: var(--sidebar-menu);
+  --user-chat-message: #4CAF50;
+  --chat-info: var(--sidebar-menu);
+
+  --hover-color: rgba(0, 0, 0, 0.8);
   --bar-color: rgba(255, 255, 255, 0.1);
-
-  --border-in-light: 1px solid rgba(255, 255, 255, 0.192);
-
+  --border-in-light: 1px solid rgba(255, 255, 255, 0.18);
   --theme-color: var(--gray);
 
-  div:not(.no-dark) > svg {
+  div:not(.no-dark)>svg {
     filter: invert(0.5);
   }
 }
@@ -86,6 +108,7 @@
     @include dark;
   }
 }
+
 html {
   height: var(--full-height);
 
@@ -108,7 +131,7 @@ body {
   overflow: hidden;
 
   @media only screen and (max-width: 600px) {
-    background-color: var(--second);
+    background-color: var(--primary);
   }
 }
 
@@ -151,7 +174,7 @@ input {
 
 input[type="checkbox"] {
   cursor: pointer;
-  background-color: var(--white);
+  background-color: var(--card-block-second);
   color: var(--black);
   appearance: none;
   border: var(--border-in-light);
@@ -227,7 +250,7 @@ input[type="password"] {
   border: var(--border-in-light);
   min-height: 36px;
   box-sizing: border-box;
-  background: var(--white);
+  background: var(--card-block-second);
   color: var(--black);
   padding: 0 10px;
   max-width: 50%;
@@ -305,6 +328,7 @@ pre {
   &:hover {
     filter: brightness(0.9);
   }
+
   &:focus {
     filter: brightness(0.95);
   }
@@ -349,7 +373,7 @@ pre {
   justify-content: center;
   border: var(--border-in-light);
   box-shadow: var(--card-shadow);
-  border-radius: 11px;
+  border-radius: 50%;
 }
 
 .one-line {

@@ -129,7 +129,7 @@ const en: LocaleType = {
       SubTitle: "Preview markdown in bubble",
     },
     Model: {
-      Title: "AI character",
+      Title: "🤖 AI character",
       SubTitle: "Choose to switch different AI characters",
 
       Reload: {

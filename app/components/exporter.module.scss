@@ -105,10 +105,10 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: var(--card-shadow) inset;
-    background-color: var(--gray);
+    background: var(--chat-container);
 
     .chat-info {
-      background-color: var(--second);
+      background-color: var(--chat-info);
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
@@ -162,7 +162,7 @@
         color: var(--primary);
         padding: 2px 15px;
         border-radius: 10px;
-        background-color: var(--white);
+        background-color: var(--card-block);
         box-shadow: var(--card-shadow);
 
         &:not(:last-child) {
@@ -184,7 +184,7 @@
         padding: 8px 10px;
         max-width: calc(100% - 104px);
         box-shadow: var(--card-shadow);
-        border: var(--border-in-light);
+        //border: var(--border-in-light);
 
         code,
         pre {
@@ -194,7 +194,7 @@
 
       &-assistant {
         .body {
-          background-color: var(--white);
+          background-color: var(--chat-message);
         }
       }
 
@@ -206,7 +206,7 @@
         }
 
         .body {
-          background-color: var(--second);
+          background-color: var(--user-chat-message);
           margin-right: 10px;
         }
       }
