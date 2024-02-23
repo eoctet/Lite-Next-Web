@@ -66,14 +66,9 @@ export function useSwitchTheme() {
       'meta[name="theme-color"][media*="light"]',
     );
 
-    if (config.theme === "auto") {
-      metaDescriptionDark?.setAttribute("content", "#151515");
-      metaDescriptionLight?.setAttribute("content", "#fafafa");
-    } else {
-      const themeColor = getCSSVar("--theme-color");
-      metaDescriptionDark?.setAttribute("content", themeColor);
-      metaDescriptionLight?.setAttribute("content", themeColor);
-    }
+    const themeColor = getCSSVar("--theme-color");
+    metaDescriptionDark?.setAttribute("content", themeColor);
+    metaDescriptionLight?.setAttribute("content", themeColor);
   }, [config.theme]);
 }
 

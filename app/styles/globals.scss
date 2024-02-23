@@ -11,19 +11,22 @@
 
   --modal: var(--white);
 
-  --sidebar: var(--primary);
+  --sidebar: linear-gradient(-20deg, var(--white), var(--white), var(--white), var(--gray));
   --sidebar-menu: var(--white);
+  --sidebar-menu-border: var(--selected);
   --selected: var(--gray);
+  --hover-color: rgba(220, 232, 255, 0.8);
 
   --card-block: var(--white);
   --card-block-second: var(--white);
 
   --chat-container: var(--white);
   --chat-message: var(--gray);
-  --user-chat-message: #4CAF50;
   --chat-info: var(--primary);
+  --user-chat-message: #4CAF50;
 
-  --hover-color: rgba(220, 232, 255, 0.8);
+  --pop-color: rgba(220, 232, 255, 0.3);
+
   --bar-color: rgba(0, 0, 0, 0.1);
   --border-in-light: 1px solid rgba(0, 0, 0, 0.18);
   --theme-color: var(--gray);
@@ -46,17 +49,20 @@
 
   --sidebar: linear-gradient(0deg, var(--white), rgb(16, 35, 67), var(--white));
   --sidebar-menu: rgba(1, 1, 3, 0.5);
+  --sidebar-menu-border: rgba(0, 0, 0, 0.0);
   --selected: var(--primary);
+  --hover-color: rgba(0, 0, 0, 0.8);
 
   --card-block: var(--sidebar-menu);
   --card-block-second: rgba(6, 11, 22, 0.5);
 
   --chat-container: var(--sidebar);
   --chat-message: var(--sidebar-menu);
-  --user-chat-message: #4CAF50;
   --chat-info: var(--sidebar-menu);
+  --user-chat-message: #4CAF50;
 
-  --hover-color: rgba(0, 0, 0, 0.8);
+  --pop-color: rgba(0, 0, 0, 0.2);
+
   --bar-color: rgba(255, 255, 255, 0.1);
   --border-in-light: 1px solid rgba(255, 255, 255, 0.18);
   --theme-color: var(--gray);
